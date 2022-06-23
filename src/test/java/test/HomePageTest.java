@@ -8,7 +8,9 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestPage extends BasePage {
+public class HomePageTest extends BasePage {
+
+    //TODO: create try/catch for wdwait
 
     @BeforeMethod
     public void setUpTest() {
