@@ -10,6 +10,7 @@ import java.util.List;
 public class RadioButton {
     public WebDriver driver;
     public WebDriverWait wdwait;
+    public By info = By.className("mt-3");
 
     public RadioButton(WebDriver driver, WebDriverWait wdwait) {
         this.driver = driver;
@@ -19,4 +20,5 @@ public class RadioButton {
     public List<WebElement> getRadios () {
         return driver.findElements(By.tagName("input"));
     }
+    public WebElement getInfo () { return driver.findElement(info);}
 }

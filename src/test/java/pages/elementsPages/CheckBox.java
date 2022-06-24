@@ -14,6 +14,10 @@ public class CheckBox {
         this.wdwait = wdwait;
     }
 
+
+    public WebElement getCheckBox () {
+        return driver.findElement(By.className("rct-icon.rct-icon-uncheck"));
+    }
     public WebElement getTreeNodeHome () {
         return driver.findElement(By.id("tree-node-home"));
     }

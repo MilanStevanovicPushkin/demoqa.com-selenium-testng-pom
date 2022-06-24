@@ -29,10 +29,11 @@ public class CheckBoxTest extends BasePage {
     @Test
     public void clickOnCheckBox() {
 
-        wdwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("label")));
+        //wdwait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName("label")));
+        actions.moveToElement(checkBox.getCheckBox()).click().build().perform();
         //driver.findElement(By.tagName("body")).sendKeys(Keys.PAGE_DOWN);
         //System.out.println(checkBox.getTreeNodeHome() + " " + checkBox.getTreeNodeHome().getTagName());
-        checkBox.getRctText().click();
+        //checkBox.getRctText().click();
        // Assert.assertEquals(text_box.getParagraphs().get(3).getText(), "Permananet Address :" + permanentAddress);
 
     }
