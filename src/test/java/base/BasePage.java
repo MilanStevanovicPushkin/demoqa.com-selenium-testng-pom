@@ -8,9 +8,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import pages.BookStoreApp;
 import pages.Elements;
 import pages.Forms;
 import pages.HomePage;
+import pages.bookStorePages.Books;
+import pages.bookStorePages.Login;
 import pages.elementsPages.CheckBox;
 import pages.elementsPages.RadioButton;
 import pages.elementsPages.Text_Box;
@@ -31,6 +34,9 @@ public class BasePage {
     public RadioButton radioButton;
     public Forms forms;
     public PracticeForm practiceForm;
+    public BookStoreApp bookStoreApp;
+    public Login login;
+    public Books books;
 
 
 
@@ -48,6 +54,9 @@ public class BasePage {
         radioButton = new RadioButton(driver, wdwait);
         forms = new Forms(driver, wdwait);
         practiceForm = new PracticeForm(driver, wdwait);
+        bookStoreApp = new BookStoreApp(driver, wdwait);
+        login = new Login(driver, wdwait);
+        books = new Books(driver, wdwait);
         //System.out.println(driver);
 
     }
@@ -55,7 +64,7 @@ public class BasePage {
     @AfterClass
     public void tearDown() throws InterruptedException {
         Thread.sleep(5000);
-        driver.quit();
+        //driver.quit();
     }
 
 }

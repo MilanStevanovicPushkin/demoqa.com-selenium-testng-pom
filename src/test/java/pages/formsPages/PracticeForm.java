@@ -68,8 +68,6 @@ public class PracticeForm {
     public List<String> getResults () {
         List<String> ret = new ArrayList<>();
         List<WebElement> rows = driver.findElements(By.tagName("tr"));
-        //System.out.println(rows.get(0).findElements(By.tagName("td")).get(0).getText());
-        //System.out.println(rows.get(0).findElements(By.tagName("td")).get(1).getText());
         for (int i=1; i<rows.size(); i++) ret.add(rows.get(i).findElements(By.tagName("td")).get(1).getText());
         return ret;
     }
